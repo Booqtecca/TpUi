@@ -1,0 +1,47 @@
+---
+name: TpUI
+main: booqtecca\TpUI\Loader
+version: 3.3.3
+api: ["3.13"]
+load: POSTWORLD
+authors:
+  - Booqtecca 
+permissions:
+  TpUI.command:
+    description: "Permission to use TpUI commands"
+    default: true
+    children:
+      TpUI.command.warp:
+        description: "Permission to use TpUI warp commands"
+        default: op
+        children:
+          TpUI.command.warp.add:
+            description: "Add warps to TpUI"
+            default: op
+          TpUI.command.warp.remove:
+            description: "Remove warps from TpUI"
+            default: op
+          TpUI.command.warp.list:
+            description: "List warps"
+            default: op
+          TpUI.command.warp.teleport:
+            description: "Teleport to a TpUI warp"
+            default: op
+      TpUI.command.world:
+        description: "Open the world ui"
+        default: op
+  TpUI.warp:
+    description: "Permission to teleport to warps"
+    default: true
+    children:
+      TpUI.warp.*:
+        description: "Permission for a specific warp"
+        default: op
+  TpUI.world:
+    description: "Permission to teleport to worlds"
+    default: true
+    children:
+      TpUI.world.*:
+        description: "Permission for a specific world"
+        default: op
+...
