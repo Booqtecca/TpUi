@@ -2,7 +2,7 @@
 name: TpUI
 main: booqtecca\TpUI\Loader
 version: 3.3.3
-api: ["3.13"]
+api: ["4.0.0" ]
 load: POSTWORLD
 authors:
   - Booqtecca 
